@@ -2,19 +2,20 @@
 	<nav
 		class="navbar is-success" role="navigation" aria-label="main navigation"
 	>
-		<div class="navbar-brand">
-			<a class="navbar-item is-size-4 is-family-monospace" >
-				Noteballs
-			</a>
+		<div class="container is-max-desktop">
+			<div class="navbar-brand">
+				<a class="navbar-item is-size-4 is-family-monospace" >
+					Noteballs
+				</a>
 
-			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-				<span aria-hidden="true"></span>
-			</a>
-		</div>
+				<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+					<span aria-hidden="true"></span>
+				</a>
+			</div>
 
-		<div id="navbarBasicExample" class="navbar-menu">
+			<div id="navbarBasicExample" class="navbar-menu">
 			<div class="navbar-start">
 			</div>
 
@@ -33,6 +34,7 @@
 				</RouterLink>
 
 			</div>
+		</div>
 		</div>
 	</nav>
 </template>
