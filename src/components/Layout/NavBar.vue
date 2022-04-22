@@ -10,7 +10,9 @@
 
 				<a
 					role="button"
-					class="navbar-burger is-active"
+					@click.prevent="showMobileNav=!showMobileNav"
+					class="navbar-burger"
+					:class="{'is-active': showMobileNav}"
 					aria-label="menu"
 					aria-expanded="false"
 					data-target="navbarBasicExample"
@@ -21,7 +23,11 @@
 				</a>
 			</div>
 
-			<div id="navbarBasicExample" class="navbar-menu is-active">
+			<div
+				id="navbarBasicExample"
+				class="navbar-menu"
+				:class="{'is-active': showMobileNav}"
+			>
 			<div class="navbar-start">
 			</div>
 
@@ -50,7 +56,13 @@ export default {
 	name: "NavBar"
 }
 </script>
+<script setup>
+	/* imports */
+	import { ref } from 'vue'
+ 	/* mobile nav */
 
+	const showMobileNav = ref(false)
+</script>
 <style scoped>
 
 </style>
