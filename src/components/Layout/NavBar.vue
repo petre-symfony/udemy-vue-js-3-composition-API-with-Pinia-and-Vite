@@ -2,11 +2,11 @@
 	<nav
 		class="navbar is-success" role="navigation" aria-label="main navigation"
 	>
-		<div class="container is-max-desktop">
+		<div class="container is-max-desktop px-2">
 			<div class="navbar-brand">
-				<a class="navbar-item is-size-4 is-family-monospace" >
+				<div class="navbar-item is-size-4 is-family-monospace" >
 					Noteballs
-				</a>
+				</div>
 
 				<a
 					role="button"
