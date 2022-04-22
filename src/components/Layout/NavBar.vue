@@ -3,8 +3,8 @@
 		class="navbar is-success" role="navigation" aria-label="main navigation"
 	>
 		<div class="navbar-brand">
-			<a class="navbar-item" href="https://bulma.io">
-				<img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+			<a class="navbar-item is-size-4 is-family-monospace" >
+				Noteballs
 			</a>
 
 			<a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -19,14 +19,19 @@
 			</div>
 
 			<div class="navbar-end">
-				<div class="navbar-item">
-					<RouterLink class="navbar-item" to="/">
-						Notes
-					</RouterLink>
-					<RouterLink class="navbar-item" to="/stats">
-						Stats
-					</RouterLink>
-				</div>
+				<RouterLink
+					class="navbar-item" to="/"
+					active-class="is-active"
+				>
+					Notes
+				</RouterLink>
+				<RouterLink
+					class="navbar-item" to="/stats"
+					active-class="is-active"
+				>
+					Stats
+				</RouterLink>
+
 			</div>
 		</div>
 	</nav>
