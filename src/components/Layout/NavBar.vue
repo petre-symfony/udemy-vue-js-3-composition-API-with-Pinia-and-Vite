@@ -64,5 +64,11 @@ export default {
 	const showMobileNav = ref(false)
 </script>
 <style scoped>
-
+	@media (max-width: 1023px) {
+		.navbar-menu {
+			position: absolute;
+			left: 0;
+			width: 100%;
+		}
+	}
 </style>
