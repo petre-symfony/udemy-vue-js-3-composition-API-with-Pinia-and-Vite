@@ -16,8 +16,19 @@
 		}
 	])
 	const addNote = () => {
-		console.log('addNote')
+		let currentDate = new Date().getTime(),
+				id = currentDate.toString()
+
+		let note = {
+			id,
+			content: newNote.value
+		}
+
+		notes.value.unshift(note)
+
+		newNote.value = ''
 	}
+
 </script>
 <template>
 	<div class="notes">
