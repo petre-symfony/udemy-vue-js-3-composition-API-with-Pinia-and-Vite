@@ -4,7 +4,8 @@
 	notes
  */
 
-	const newNote = ref('aaa')
+	const newNote = ref('')
+	const newNoteRef = ref(null)
 	const notes = ref([
 		{
 			id: 'id1',
@@ -25,8 +26,8 @@
 		}
 
 		notes.value.unshift(note)
-
 		newNote.value = ''
+		newNoteRef.value.focus()
 	}
 
 </script>
@@ -39,6 +40,7 @@
 						class="textarea"
 						placeholder="Add a new note"
 						v-model="newNote"
+						ref="newNoteRef"
 					/>
 				</div>
 			</div>
