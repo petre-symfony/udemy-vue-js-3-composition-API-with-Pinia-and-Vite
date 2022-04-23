@@ -4,6 +4,7 @@
 	notes
  */
 
+	const newNote = ref('aaa')
 	const notes = ref([
 		{
 			id: 'id1',
@@ -14,6 +15,9 @@
 			content: 'This is a shorter note'
 		}
 	])
+	const addNote = () => {
+		console.log('addNote')
+	}
 </script>
 <template>
 	<div class="notes">
@@ -23,6 +27,7 @@
 					<textarea
 						class="textarea"
 						placeholder="Add a new note"
+						v-model="newNote"
 					/>
 				</div>
 			</div>
@@ -31,6 +36,8 @@
 				<div class="control">
 					<button
 						class="button is-link has-background-success"
+						@click="addNote"
+						:disabled="!newNote"
 					>
 						Add New Note
 					</button>
