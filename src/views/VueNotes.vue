@@ -15,6 +15,7 @@
 	const newNoteRef = ref(null)
 
 	const addNote = () => {
+		/*
 		let currentDate = new Date().getTime(),
 				id = currentDate.toString()
 
@@ -22,8 +23,12 @@
 			id,
 			content: newNote.value
 		}
-
+		
 		notes.value.unshift(note)
+
+	 	*/
+		storeNotes.addNote()
+
 		newNote.value = ''
 		newNoteRef.value.focus()
 	}
@@ -56,7 +61,7 @@
 				<div class="control">
 					<button
 						class="button is-link has-background-success"
-						@click="storeNotes.addNote"
+						@click="addNote"
 						:disabled="!newNote"
 					>
 						Add New Note
