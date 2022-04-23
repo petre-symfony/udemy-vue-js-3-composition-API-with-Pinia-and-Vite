@@ -1,5 +1,7 @@
 <script setup>
 	import { ref } from 'vue'
+	import Note from "@/components/Notes/Note.vue";
+
 	/*
 	notes
  */
@@ -58,30 +60,9 @@
 			</div>
 		</div>
 
-		<div
+		<Note
 			v-for="note in notes" :key="note.id"
-			class="card mb-4"
-		>
-			<header class="card-header">
-				<p class="card-header-title">
-					Component
-				</p>
-				<button class="card-header-icon" aria-label="more options">
-      <span class="icon">
-        <i class="fas fa-angle-down" aria-hidden="true"></i>
-      </span>
-				</button>
-			</header>
-			<div class="card-content">
-				<div class="content">
-					{{ note.content }}
-				</div>
-			</div>
-			<footer class="card-footer">
-				<a href="#" class="card-footer-item">Edit</a>
-				<a href="#" class="card-footer-item">Delete</a>
-			</footer>
-		</div>
+		/>
 	</div>
 </template>
 
