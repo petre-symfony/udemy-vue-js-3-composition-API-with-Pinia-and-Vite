@@ -62,6 +62,7 @@
 
 		<Note
 			v-for="note in notes" :key="note.id"
+			:note="note"
 		/>
 	</div>
 </template>
