@@ -58,7 +58,7 @@
 
 <script>
 export default {
-	name: "VueNotes"
+	name: "ViewNotes"
 }
 </script>
 

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-	name: "VueEditNote"
+	name: "ViewEditNote"
 }
 </script>
 
