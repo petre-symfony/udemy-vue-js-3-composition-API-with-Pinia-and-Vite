@@ -41,6 +41,17 @@ export default {
 		emits
 	 */
 	const emit = defineEmits(['update:modelValue'])
+
+	/*
+		focus textarea
+	 */
+	const focusTextarea = () => {
+		console.log('focus textarea')
+	}
+
+	defineExpose({
+		focusTextarea
+	})
 </script>
 
 <style scoped>
