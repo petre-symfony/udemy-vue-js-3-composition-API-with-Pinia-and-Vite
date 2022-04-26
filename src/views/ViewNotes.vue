@@ -25,31 +25,9 @@
 </script>
 <template>
 	<div class="notes">
-		<!--<div class="card has-background-success-dark p-4 mb-5">
-			<div class="field">
-				<div class="control">
-					<textarea
-						class="textarea"
-						placeholder="Add a new note"
-						v-model="newNote"
-						ref="newNoteRef"
-					/>
-				</div>
-			</div>
-
-			<div class="field is-grouped is-grouped-right">
-				<div class="control">
-					<button
-						class="button is-link has-background-success"
-						@click="addNote"
-						:disabled="!newNote"
-					>
-						Add New Note
-					</button>
-				</div>
-			</div>
-		</div> -->
-		<AddEditNote>
+		<AddEditNote
+			v-model="newNote"
+		>
 			<template #buttons>
 				<button
 					class="button is-link has-background-success"
@@ -60,7 +38,7 @@
 				</button>
 			</template>
 		</AddEditNote>
-
+		
 		<Note
 			v-for="note in storeNotes.notes" :key="note.id"
 			:note="note"

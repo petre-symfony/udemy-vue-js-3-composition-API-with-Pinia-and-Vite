@@ -6,6 +6,8 @@
 						class="textarea"
 						placeholder="Add a new note"
 						ref="newNoteRef"
+						v-model="modelValue"
+						@input="$emit('update:modelValue', modelValue)"
 					/>
 			</div>
 		</div>
@@ -22,6 +24,23 @@
 export default {
 	name: "AddEditNote"
 }
+</script>
+
+<script setup>
+	/*
+		props
+	 */
+	const props = defineProps({
+		modelValue: {
+			type: String,
+			required: true
+		}
+	})
+
+	/*
+		emits
+	 */
+	const emit = defineEmits(['update:modelValue'])
 </script>
 
 <style scoped>
