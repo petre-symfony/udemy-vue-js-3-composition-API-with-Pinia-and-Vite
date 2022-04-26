@@ -5,7 +5,7 @@
 					<textarea
 						class="textarea"
 						placeholder="Add a new note"
-						ref="newNoteRef"
+						ref="textareaRef"
 						v-model="modelValue"
 						@input="$emit('update:modelValue', modelValue)"
 					/>
@@ -28,6 +28,11 @@ export default {
 
 <script setup>
 	/*
+		imports
+	 */
+	import { ref } from "vue"
+
+	/*
 		props
 	 */
 	const props = defineProps({
@@ -45,8 +50,10 @@ export default {
 	/*
 		focus textarea
 	 */
+	const textareaRef = ref(null)
+
 	const focusTextarea = () => {
-		console.log('focus textarea')
+		textareaRef.value.focus()
 	}
 
 	defineExpose({
