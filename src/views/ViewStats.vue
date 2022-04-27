@@ -10,11 +10,11 @@
 			<tbody>
 				<tr>
 					<td>Number of Notes</td>
-					<td>XXX</td>
+					<td>{{ storeNotes.totalNotesCount }}</td>
 				</tr>
 				<tr>
 					<td>Number of Character (of all notes)</td>
-					<td>XXX</td>
+					<td>{{ storeNotes.totalCharactersCount }}</td>
 				</tr>
 			</tbody>
 		</table>
@@ -25,6 +25,18 @@
 export default {
 	name: "VueStats"
 }
+</script>
+
+<script setup>
+	/*
+	imports
+	 */
+	import { useStoreNotes } from "@/stores/storeNotes"
+
+	/*
+	store
+	 */
+	const storeNotes = useStoreNotes()
 </script>
 
 <style scoped>
