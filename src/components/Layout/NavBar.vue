@@ -33,12 +33,14 @@
 
 			<div class="navbar-end">
 				<RouterLink
+				 	@click="showMobileNav = false"
 					class="navbar-item" to="/"
 					active-class="is-active"
 				>
 					Notes
 				</RouterLink>
 				<RouterLink
+					@click="showMobileNav = false"
 					class="navbar-item" to="/stats"
 					active-class="is-active"
 				>
