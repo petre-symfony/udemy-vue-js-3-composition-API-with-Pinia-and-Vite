@@ -7,7 +7,8 @@
 		>
 			<template #buttons>
 				<button
-					class="button is-link has-background-success"
+					class="button is-link has-background-link"
+					:disabled="!noteContent"
 				>
 					Save Note
 				</button>
