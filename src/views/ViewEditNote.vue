@@ -1,6 +1,17 @@
 <template>
 	<div class="edit-note">
-		<h1>Edit Note with an id of: {{ $route.params.id }}</h1>
+		<AddEditNote
+			ref="addEditNoteRef"
+			v-model="noteContent"
+		>
+			<template #buttons>
+				<button
+					class="button is-link has-background-success"
+				>
+					Save Note
+				</button>
+			</template>
+		</AddEditNote>
 	</div>
 </template>
 
@@ -10,6 +21,18 @@ export default {
 }
 </script>
 
+<script setup>
+	/*
+		imports
+	 */
+	import AddEditNote from "@/components/Notes/AddEditNote.vue"
+	import { ref } from 'vue'
+
+	/*
+		note
+	 */
+	const noteContent = ref('')
+</script>
 <style scoped>
 
 </style>
