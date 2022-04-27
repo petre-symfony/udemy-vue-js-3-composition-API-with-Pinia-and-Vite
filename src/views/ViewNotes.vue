@@ -27,6 +27,7 @@
 		<AddEditNote
 			v-model="newNote"
 			ref="addEditNoteRef"
+			placeholder="Add a new note"
 		>
 			<template #buttons>
 				<button

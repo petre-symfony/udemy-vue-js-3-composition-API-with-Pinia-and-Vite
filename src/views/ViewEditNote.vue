@@ -4,6 +4,8 @@
 			ref="addEditNoteRef"
 			v-model="noteContent"
 			bgColor="link"
+			placeholder="Edit Note"
+			label="Edit Note"
 		>
 			<template #buttons>
 				<button
