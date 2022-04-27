@@ -9,6 +9,12 @@
 		>
 			<template #buttons>
 				<button
+					@click="$router.push('/')"
+					class="button is-link is-light"
+				>
+					Cancel
+				</button>
+				<button
 					class="button is-link has-background-link"
 					:disabled="!noteContent"
 				>
