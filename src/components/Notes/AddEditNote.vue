@@ -16,6 +16,7 @@
 						v-model="modelValue"
 						@input="$emit('update:modelValue', modelValue)"
 						:placeholder="placeholder"
+						v-autofocus
 					/>
 			</div>
 		</div>
@@ -78,6 +79,15 @@ export default {
 	defineExpose({
 		focusTextarea
 	})
+
+	/*
+		directives
+	 */
+	const vAutofocus = {
+		mounted: (el) => {
+			el.focus()
+		}
+	}
 </script>
 
 <style scoped>
