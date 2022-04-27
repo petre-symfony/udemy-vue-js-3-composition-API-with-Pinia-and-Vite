@@ -22,6 +22,7 @@
 				</button>
 			</template>
 		</AddEditNote>
+		
 	</div>
 </template>
 
@@ -37,11 +38,25 @@ export default {
 	 */
 	import AddEditNote from "@/components/Notes/AddEditNote.vue"
 	import { ref } from 'vue'
+	import { useStoreNotes } from "@/stores/storeNotes"
+	import { useRoute } from 'vue-router'
+
+	/*
+		router
+	 */
+	const route = useRoute()
+
+	/*
+		store
+	 */
+	const storeNotes = useStoreNotes()
 
 	/*
 		note
 	 */
 	const noteContent = ref('')
+	console.log(route.params.id)
+	noteContent.value = storeNotes.getNoteContent
 </script>
 <style scoped>
 
