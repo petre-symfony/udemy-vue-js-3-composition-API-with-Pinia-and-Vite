@@ -3,6 +3,7 @@
 		<AddEditNote
 			ref="addEditNoteRef"
 			v-model="noteContent"
+			bgColor="link"
 		>
 			<template #buttons>
 				<button
