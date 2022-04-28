@@ -1,5 +1,5 @@
 <script setup>
-	import { ref } from 'vue'
+	import { ref, watch } from 'vue'
 	import Note from "@/components/Notes/Note.vue"
 	import { useStoreNotes } from "@/stores/storeNotes"
 	import AddEditNote from "@/components/Notes/AddEditNote.vue"
@@ -21,6 +21,14 @@
 		addEditNoteRef.value.focusTextarea()
 	}
 
+	/*
+		watch characters
+	 */
+	watch(newNote, (newValue, oldValue) => {
+		if (newValue.length === 100) {
+			alert('Only 100 characters allowed!')
+		}
+	})
 </script>
 <template>
 	<div class="notes">
