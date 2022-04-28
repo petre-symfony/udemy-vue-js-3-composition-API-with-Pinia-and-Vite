@@ -52,7 +52,7 @@ export default {
 	love noteballs
 	 */
 	const loveNoteballs = ref('')
-	useWatchCharacters(loveNoteballs)
+	useWatchCharacters(loveNoteballs, 50)
 </script>
 
 <style scoped>
