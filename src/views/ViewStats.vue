@@ -22,6 +22,7 @@
 			class="input"
 			type="text"
 			placeholder="Do you love noteballs??"
+			v-model="loveNoteballs"
 			v-autofocus
 		>
 	</div>
@@ -39,11 +40,19 @@ export default {
 	 */
 	import { useStoreNotes } from "@/stores/storeNotes"
 	import { vAutofocus } from "@/directives/vAutofocus"
+	import { useWatchCharacters } from "@/use/useWatchCharacters"
+	import { ref } from 'vue'
 
 	/*
 	store
 	 */
 	const storeNotes = useStoreNotes()
+
+	/*
+	love noteballs
+	 */
+	const loveNoteballs = ref('')
+	useWatchCharacters(loveNoteballs)
 </script>
 
 <style scoped>

@@ -1,8 +1,9 @@
 <script setup>
-	import { ref, watch } from 'vue'
+	import { ref } from 'vue'
 	import Note from "@/components/Notes/Note.vue"
 	import { useStoreNotes } from "@/stores/storeNotes"
 	import AddEditNote from "@/components/Notes/AddEditNote.vue"
+	import { useWatchCharacters } from "@/use/useWatchCharacters"
 
 	/*
 		store
@@ -22,13 +23,9 @@
 	}
 
 	/*
-		watch characters
+	watch characters
 	 */
-	watch(newNote, (newValue, oldValue) => {
-		if (newValue.length === 100) {
-			alert('Only 100 characters allowed!')
-		}
-	})
+	useWatchCharacters(newNote)
 </script>
 <template>
 	<div class="notes">
